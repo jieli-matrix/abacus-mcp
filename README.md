@@ -7,6 +7,60 @@
 
 > MCP server for searching and managing arXiv research papers with intelligent paper information extraction and local storage.
 
+## 📋 Prerequisites
+
+### 1. Install Node.js 18 with NVM
+
+**Linux/macOS:**
+```bash
+# Install NVM
+# Refer to https://github.com/nvm-sh/nvm for latest version
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# Reload shell configuration
+source ~/.bashrc  # or ~/.zshrc
+
+# Install and use Node.js 18
+nvm install 18
+nvm use 18
+
+# Verify installation
+node --version  
+npm --version   
+```
+
+**Windows:**
+1. Download and install [nvm-windows](https://github.com/coreybutler/nvm-windows/releases)
+2. Open new command prompt and run:
+```cmd
+nvm install 18
+nvm use 18
+node --version
+npm --version
+```
+
+### 2. Install UV Package Manager
+
+```bash
+# Install UV via pip
+pip install uv
+
+# Verify installation
+uv --version
+```
+
+### 3. Configure UV Mirror Source (Optional)
+
+For faster package downloads in China:
+```bash
+# Add packages with Tsinghua mirror
+uv add --index https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple <package_name>
+
+# Or set as default index in pyproject.toml:
+# [[tool.uv.index]]
+# url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+```
+
 ## 🚀 Quick Start
 
 ```bash
